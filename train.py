@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
@@ -130,6 +131,7 @@ def show_feature_importance(model, X):
     print(importance_df)
 
 def main():
+    os.makedirs("model", exist_ok=True)
     DATA_PATH = "data/Telco-Customer-Churn.csv"
 
     print("Loading dataset...")
